@@ -25,11 +25,11 @@ import org.bukkit.potion.PotionEffectType;
 
 /**
  * This class handles the /world command. It runs the required checks that the player can run the command,
- * and then it passes it on to the relevant method in PvPTransportation.
+ * and then it passes it on to the relevant method in smallTransportation.
  */
 public class WorldCommand implements CommandExecutor {
 
-	/** Teleports player to a random location in the pvp world
+	/** Teleports player to a random location in the small world
 	 *
 	 * Returns true if it was properly handled (teleport successful, or
 	 * player was deteremined ineligible for teleport)
@@ -54,7 +54,7 @@ public class WorldCommand implements CommandExecutor {
 
 		String sWorld = player.getWorld().getName();
 
-		/* Checks that they are either in the pvp world or overworld */
+		/* Checks that they are either in the small world or overworld */
 		if (!sWorld.equals("world") && !sWorld.equals("pvp")) {
 			player.sendMessage(ChatColor.RED + "You must be in the overworld to use this command.");
 			return true;
@@ -77,7 +77,7 @@ public class WorldCommand implements CommandExecutor {
 			return true;
 		}
 
-		/* If the person using the command is in the pvp world, then they shall be teleport back to the pvp world. */
+		/* If the person using the command is in the small world, then they shall be teleport back to the pvp world. */
 		else if (sWorld.equals("pvp")) {
 			TeleportBack.teleportBack(player);
 		}

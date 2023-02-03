@@ -21,9 +21,9 @@ public class PlayerJoin implements Listener {
 	}
 
 	/**
-	 * Appends '(in pvp)' to the player login messages for any player
-	 * logging in in the pvp world. Though it only shows the changed message
-	 * to people who have used /pvplist subscribe
+	 * Appends '(in small)' to the player login messages for any player
+	 * logging in in the small world. Though it only shows the changed message
+	 * to people who have used /smlist subscribe
 	 */
 	private void JoinMessageAppend(PlayerJoinEvent event) {
 		if (!event.getPlayer().getWorld().getName().equals("pvp")) {
@@ -37,7 +37,7 @@ public class PlayerJoin implements Listener {
 				.getOnlinePlayers()) {
 			if (PvPListCommand.subscribed_players.contains(
 						p.getUniqueId())) {
-				p.sendMessage(msg + " (in pvp)");
+				p.sendMessage(msg + " (in small)");
 			} else {
 				p.sendMessage(msg);
 			}

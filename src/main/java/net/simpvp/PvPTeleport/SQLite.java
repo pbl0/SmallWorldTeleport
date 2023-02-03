@@ -38,7 +38,7 @@ public class SQLite {
 				PvPTeleport.instance.getLogger().info("Database not yet created. Creating ...");
 
 				/* Player locations in the overworld,
-				 * used when players teleport to 'pvp' */
+				 * used when players teleport to 'small' */
 				String query = "CREATE TABLE worldlocs "
 					+ "(id INTEGER PRIMARY KEY AUTOINCREMENT,"
 					+ "uuid BLOB,"

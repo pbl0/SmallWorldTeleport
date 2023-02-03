@@ -18,7 +18,7 @@ public class PvPTeleport extends JavaPlugin {
 		}
 
 		getCommand("world").setExecutor(new WorldCommand());
-		getCommand("pvplist").setExecutor(new PvPListCommand());
+		getCommand("smlist").setExecutor(new PvPListCommand());
 		getCommand("disableworld").setExecutor(new DisableWorldCommand());
 		getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
 		getServer().getPluginManager().registerEvents(new PlayerQuit(), this);

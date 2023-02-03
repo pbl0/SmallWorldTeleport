@@ -12,11 +12,11 @@ import java.util.UUID;
 
 public class PvPListCommand implements CommandExecutor {
 
-	/* Stores all the players who have /pvplist subscribed */
+	/* Stores all the players who have /smlist subscribed */
 	public static HashSet<UUID> subscribed_players = new HashSet<UUID>();
 
 	/**
-	 * Print a list of players in the pvp world to the sender.
+	 * Print a list of players in the small world to the sender.
 	 */
 	public boolean onCommand(
 			CommandSender sender,
@@ -40,7 +40,7 @@ public class PvPListCommand implements CommandExecutor {
 
 	/**
 	 * To be called when a player teleports, so that this information
-	 * may be sent to all /pvplist subscribed players.
+	 * may be sent to all /smlist subscribed players.
 	 *
 	 * MUST be called AFTER the player has been teleported.
 	 */
@@ -65,7 +65,7 @@ public class PvPListCommand implements CommandExecutor {
 	}
 
 	/**
-	 * Handles /pvplist subscribe
+	 * Handles /smlist subscribe
 	 *
 	 * Setting whether to show messages when somebody enters/leaves the
 	 * pvp world to the given player.
@@ -73,7 +73,7 @@ public class PvPListCommand implements CommandExecutor {
 	private void subscribe(Player player, String[] args) {
 		if (args.length > 1 || !args[0].equalsIgnoreCase("subscribe")) {
 			String msg = "Invalid usage. Correct usage is "
-				+ "/pvplist [subscribe]";
+				+ "/smlist [subscribe]";
 			
 			if (player == null) {
 				PvPTeleport.instance.getLogger().info(msg);
@@ -107,7 +107,7 @@ public class PvPListCommand implements CommandExecutor {
 	}
 
 	/**
-	 * Show the list of who's in the pvp world to 'player'
+	 * Show the list of who's in the small world to 'player'
 	 */
 	private void show_list(Player player) {
 
@@ -155,11 +155,11 @@ public class PvPListCommand implements CommandExecutor {
 		if (pvpCounter == 1) {
 			message += green + " There is currently "
 				+ gold + "1"
-				+ green + " player in the PvP world.";
+				+ green + " player in the small world.";
 		} else {
 			message += green + " There are currently "
 				+ gold + pvpCounter
-				+ green + " players in the PvP world.";
+				+ green + " players in the small world.";
 		}
 
 		if (pvpCounter > 0) {

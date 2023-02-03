@@ -45,14 +45,14 @@ public class PvPTransportation {
 		SQLite.worldLocsInsert(player);
 
 		player.teleport(loc);
-		player.sendMessage(ChatColor.GOLD + "Teleporting you to a random location in the pvp world.");
+		player.sendMessage(ChatColor.GOLD + "Teleporting you to a random location in the small world.");
 		PvPTeleport.instance.getLogger().info("Teleporting "
 				+ sPlayer + " to the pvp world.");
 		PvPListCommand.on_player_teleport(player);
 	}
 
 	/**
-	 * Gives a random spawn location in the pvp world
+	 * Gives a random spawn location in the small world
 	 * @return The random location.
 	 */
 	private static Location randomSpawn() {

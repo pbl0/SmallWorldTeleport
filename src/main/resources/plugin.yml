@@ -4,10 +4,10 @@ version: 1.8
 api-version: 1.13
 commands:
   world:
-    description: Teleports player between overworld and pvp world.
+    description: Teleports player between overworld and small world.
     usage: Error. Please report at https://github.com/C4K3/PvPTeleport
-  pvplist:
-    description: Lists all players in the pvp world.
+  smlist:
+    description: Lists all players in the small world.
     usage: Error. Please report at https://github.com/C4K3/PvPTeleport
   disableworld:
-    description: Disables the /world command, returns everybody in /world
+    description: Disables the /world command, returns everybody back to the overworld.

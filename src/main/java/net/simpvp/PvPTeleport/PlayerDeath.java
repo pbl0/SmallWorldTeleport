@@ -7,9 +7,9 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.entity.Player;
 
 /**
- * Appends '(in pvp)' to the death messages of anybody who died in the
+ * Appends '(in small)' to the death messages of anybody who died in the
  * the pvp world. Though it only shows the changed message to people who have
- * used /pvplist subscribe
+ * used /smlist subscribe
  */
 public class PlayerDeath implements Listener {
 
@@ -26,7 +26,7 @@ public class PlayerDeath implements Listener {
 				.getOnlinePlayers()) {
 			if (PvPListCommand.subscribed_players.contains(
 						p.getUniqueId())) {
-				p.sendMessage(msg + " (in pvp)");
+				p.sendMessage(msg + " (in small)");
 			} else {
 				p.sendMessage(msg);
 			}
