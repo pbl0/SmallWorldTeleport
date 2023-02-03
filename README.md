@@ -1,6 +1,6 @@
 # SmallWorldTeleport (PvPTeleport)
 
-## This is a fork of [PvPTeleport](https://github.com/MoWobbler/PvPTeleport) with the only changes in the naming of the world ("small world" instead of "pvp world") for my personal use. All credits go to the original creators.
+## This is a fork of [PvPTeleport](https://github.com/MoWobbler/PvPTeleport) with only changes in the naming of the world ("small world" instead of "pvp world") for my personal use. All credits go to the original creators.
 
 ---
 
